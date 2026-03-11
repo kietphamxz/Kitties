@@ -1,66 +1,98 @@
-            .side-container {
-                margin-left: 75%;
-                flex-direction: row;
-                text-decoration: none;
-            }
-            .mid-container {
-                display: flex;
-                flex-direction: column;
-            }
-            h1 {
-                font-weight: bold;
-                font-size: 50px;
-                position: absolute;
-                left: 200px;
-                top: 80px;
-            }
-            h2 {
-                font-size: 40px;
-                position: absolute;
-                left:200px;
-                top:150px;
-            }
-            .cat {
-                font-size: 40px;
-                position: absolute;
-                left:200px;
-                top:190px;
-            }
-            h4 {
-                font-size: 20px;
-                font-weight: bold;
-                margin-left: 12pc;
-                margin-top:1.5pc;
-            }
-            .background-color {
-                background-color: silver;
-                height:5rem;
-                margin-top: -5rem;
-            }
-            .blue-one {
-                font-weight: bold;
-                font-size: 20px;
-                color: rgb(11, 151, 194);
-            }
-            .blue-two {
-                font-size: 20px;
-                color: rgb(56, 180, 218);
-            }
-            .address {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                text-align: center;
-                margin-bottom: 20px;
-                font-size: 25px;
-                margin-left: 450px;
-                margin-top:-300px;
-            }
-            .div1 {
-                font-size: 20px;
-                margin-bottom: -30px;
-            }
-            .move-up {
-                position: relative;
-                top: -200px;
-            }
+html, body {
+    height: 100vh; /* Use full viewport height */
+    margin:0;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Ensure wrapper takes full height */
+}
+
+header {
+  /* Give headers and footers a fixed height and prevent shrinking */
+    height: 250px; /* Example height */
+    flex-shrink: 0; 
+    padding: 10px;
+    background-color:rgb(53, 210, 221)
+}
+
+footer {
+  /* Give headers and footers a fixed height and prevent shrinking */
+    height: 250px; /* Example height */
+    flex-shrink: 0; 
+    background-color: rgb(29, 26, 26);
+    padding: 10px;
+    color: white;
+    text-align: center;
+    justify-content: space-evenly;
+    
+
+}
+
+.main-content-wrapper {
+    display: flex; /* Arrange sidebar and content horizontally */
+    overflow: auto; /* Enable scrolling for the middle section if content overflows */
+    flex-direction: row-reverse;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sidebar {
+    width: px; /* Example fixed width for the sidebar */
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+    background-color: #f4f4f4;
+    padding: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: left;
+    background-color: white;
+    padding-left: 70px;
+
+  /* If the sidebar itself needs a scrollbar for its own long content: */
+  /* overflow-y: auto; */ 
+}
+
+.content { /* Allow content to take up the rest of the available horizontal space */
+    padding: 10px;
+    background-color: #fff;
+  /* If only the content area should scroll (and not the whole middle wrapper): */
+  /* overflow-y: auto; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 390px;
+    justify-content: space-evenly;
+
+}
+
+.header-text {
+    margin-left: 400px;
+    margin-top: 50px;
+}
+
+.header-nav {
+    background-color: #ccc;
+
+}
+
+.nav-text {
+    font-size: 20px;
+    padding: 1px;    /* Adds spacing around the links */
+    padding-left: 400px;
+
+}
+
+.headerfont {
+    font-size: 20px;
+}
+
+.main-one {
+    color: rgb(14, 102, 184);
+    font-size: 20px;
+}
+
+.main-two {
+    color: rgb(21, 208, 214);
+    font-size: 20px;
+}
